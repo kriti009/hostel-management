@@ -1,4 +1,4 @@
-<% include ./partials/header %>
+<!-- <% include ./partials/header %>
 <div class="container">
     <h1 style="text-align: center">Signup Page!!</h1>
     <div style="margin:auto; width:30%">
@@ -16,4 +16,107 @@
         <a href="/login">Already have an account? Login</a>
     </div>
 </div>
-<% include ./partials/footer %>
+<% include ./partials/footer %> -->
+<% include ./partials/header-form %>
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <div class="login100-pic js-tilt" data-tilt>
+                <img src="images/img-01.png" alt="IMG" style="
+    padding-top: 220px;">
+            </div>
+
+            <form class="login100-form validate-form" action="/register" method="POST">
+                <span class="login100-form-title">
+                    User Registration
+                </span>
+
+                <div class="wrap-input100 validate-input" data-validate ="required" >
+                    <input class="input100" type="text" name="name" placeholder="Name">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                    <input class="input100" type="text" name="email" placeholder="Email">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate ="required">
+                    <input class="input100" type="text" name="roll" placeholder="Roll Number">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate ="required">
+                    <input class="input100" type="text" name="mobile" placeholder="Contact Number">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input"data-validate ="required">
+                    <input class="input100" type="text" name="branch" placeholder="Branch">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate ="required">
+                    <input class="input100" type="text" name="sem" placeholder="Semester">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate ="required">
+                    <input class="input100" type="text" name="gender" placeholder="Gender">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate ="required">
+                    <input class="input100" type="text" name="username" placeholder="Username">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                    <input class="input100" type="password" name="password" placeholder="Password">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn">
+                        SignIn
+                    </button>
+                </div>
+
+                <div class="text-center p-t-136">
+                    <a class="txt2" href="#">
+                        New User? Create an Account
+                        <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<% include ./partials/footer-form %>

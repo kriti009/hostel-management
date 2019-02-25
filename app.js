@@ -38,7 +38,16 @@ app.get("/register", function(req, res){
     res.render("register");
 });
 app.post("/register", function(req, res){
-    var newUser = new User({username: req.body.username});
+    var newUser = new User({
+        username: req.body.username,
+        email: req.body.email,
+        name : req.body.name,
+        roll: req.body.roll,
+        mobile: req.body.mobile,
+        branch: req.body.branch,
+        sem : req.body.sem,
+        gender: req.body.gender
+    });
     User.register(newUser, req.body.password, function(err, user){
        if(err){
           return res.redirect("register");

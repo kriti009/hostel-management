@@ -1,0 +1,26 @@
+<% include ./partials/header.ejs %>
+<div>
+    <h1><%= hostel.name %></h1>
+</div>
+<div>
+    <img src="images/hostelA.jpg" >
+</div>
+<div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus laboriosam itaque quos voluptatem quis quidem nobis, tenetur dolores blanditiis rerum odio maiores debitis, adipisci temporibus vero placeat voluptate, obcaecati magni.
+</div>
+
+<% hostel.floors.forEach(function(floor){ %>
+    <div>
+        <%= floor.name %>
+        <!-- <%= floor %> -->
+        <% floor.rooms.forEach(function(room){ %>
+            <div>
+                <%= room.roomId %>
+                
+                <!-- <% console.log(room.roomId); %> -->
+            </div>
+        <% }); %>
+    </div>
+<% }); %>
+
+<% include ./partials/footer.ejs %>

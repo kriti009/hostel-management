@@ -1,12 +1,20 @@
-var mongoose = require("mongoose");
-var passportLocalMongoose = require("passport-local-mongoose");
+var mongoose = require("mongoose"),
+    autoIncrement = require('mongoose-auto-increment');
+
 
 var hostelSchema = new mongoose.Schema({
-    [
-        floor1: {}
+    name: String,
+    hostelId : Number,
+    imageUrl: String,
+    floors : [
+        {
+            type: mongoose.SchemaTypes.ObjectId,
+            ref: "Floor"
+        }
     ]
 });
-hostelSchema.plugin(passportLocalMongoose);
+hostelSchema.plugin(autoIncrement.plugin, { model: 'Hostel', field: 'hostelId' });
 
-var Hostel = mongoose.model("Room", roomSchema);
-module.exports = Room;
+
+var Hostel = mongoose.model("Hostel", hostelSchema);
+module.exports = Hostel;

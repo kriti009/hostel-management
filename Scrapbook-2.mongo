@@ -1,0 +1,6 @@
+
+db.users.count()
+
+db.hostels.find()
+db.floors.find()
+db.rooms.find()

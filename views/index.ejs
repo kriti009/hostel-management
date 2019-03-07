@@ -1,4 +1,28 @@
 <% include ./partials/header.ejs %>
-
-
+<div class="row text-center" style="display:flex; flex-wrap:wrap">
+    <% hostel.forEach(function(hostel){ %>
+        <div class="col col-md-3 col-sm-6">
+            <div class="thumbnail">
+                <img src="images/hostelA.jpg">
+                <div class="caption">
+                    <h4><%= hostel.name %></h4>
+                </div>
+                <p>
+                    <a class="btn btn-primary" href="/hostel/<%= hostel._id %>">
+                        More Info
+                    </a>
+                </p>
+            </div>
+        </div>
+    <% }); %>
+</div>
+<!-- <div>
+    <a href="#">HOSTEL A</a>
+</div>
+<div>
+    <a href="#">HOSTEL B</a>
+</div>
+<div>
+    <a href="#">HOSTEL C</a>
+</div> -->
 <% include ./partials/footer.ejs %>
